@@ -1,0 +1,101 @@
+@use "../../styles/variables.scss" as vars;
+
+.filter {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.buttonsWrapper {
+  gap: 12px;
+}
+
+.iconButton {
+  padding: 10px;
+  svg {
+    margin-right: 0;
+  }
+  &.activeLayout {
+    border-color: vars.$accent-blue;
+    background: vars.$light-blue;
+    path {
+      stroke: vars.$accent-blue;
+    }
+  }
+}
+
+.projectsWrapper {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+  @media screen and (max-width: 1400px) {
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  }
+}
+
+.project {
+  background: vars.$neutral-white;
+  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1),
+    0px 1px 2px rgba(16, 24, 40, 0.06);
+  border-radius: 8px;
+  border: 1px solid vars.$neutral-light-15;
+  padding: 24px;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+.header {
+  margin-bottom: 14px;
+}
+
+.title {
+  @include vars.text-xl(500);
+  color: vars.$neutral-dark-100;
+}
+
+.description {
+  color: vars.$neutral-dark-80;
+  @include vars.text-sm(400);
+}
+
+.status {
+  border-radius: 16px;
+  padding: 2px 6px;
+  padding-right: 8px;
+  background: #ecfdf3;
+  height: fit-content;
+  color: #027a48;
+  @include vars.text-xs(500);
+  span {
+    width: 6px;
+    height: 6px;
+    background: #12b76a;
+    border-radius: 10px;
+    margin-right: 6px;
+  }
+  &.upcoming {
+    background: vars.$neutral-light-10;
+    color: vars.$neutral-dark-90;
+    span {
+      background: vars.$neutral-dark-80;
+    }
+  }
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+.company {
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid vars.$neutral-light-15;
+  img {
+    margin-right: 8px;
+  }
+}
+
+.date {
+  color: vars.$neutral-dark-80;
+  @include vars.text-sm(400);
+}

@@ -1,0 +1,20 @@
+@use "../../styles/variables.scss" as vars;
+
+.messageWrapper {
+  background: vars.$neutral-light-10;
+  border: 1px dashed vars.$neutral-light-30;
+  padding: 30px 24px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.title {
+  @include vars.text-md(600);
+  color: vars.$neutral-dark-100;
+  margin-bottom: 4px;
+}
+
+.subtext {
+  @include vars.text-sm(400);
+  color: vars.$neutral-dark-80;
+}

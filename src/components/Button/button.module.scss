@@ -1,0 +1,14 @@
+@use "../../styles/variables.scss" as vars;
+
+.button {
+  border-radius: 8px;
+  padding: 10px 18px;
+  @include vars.text-md(500);
+  height: fit-content;
+  max-height: 44px;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}

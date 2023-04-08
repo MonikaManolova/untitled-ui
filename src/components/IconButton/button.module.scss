@@ -1,0 +1,18 @@
+@use "../../styles/variables.scss" as vars;
+
+.buttonWrapper {
+  border-radius: 8px;
+  padding: 10px 16px;
+  height: fit-content;
+  width: fit-content;
+  transition: all 0.2s ease-in-out;
+  svg {
+    margin-right: 8px;
+  }
+  span {
+    @include vars.text-sm(500);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../styles/variables.scss" as vars;
+
+.wrapper {
+  width: calc(100% - 290px);
+  height: 100%;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.contentWrapper {
+  margin-top: 24px;
+}

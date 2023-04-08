@@ -1,0 +1,23 @@
+@use "../../styles/variables.scss" as vars;
+
+.label {
+  margin-bottom: 6px;
+  @include vars.text-sm(500);
+  color: vars.$neutral-dark-90;
+}
+
+.textarea {
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border: 1px solid vars.$neutral-light-30;
+  background: vars.$neutral-white;
+  color: vars.$neutral-dark-100;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  outline: none;
+  @include vars.text-sm(400);
+  resize: none;
+  &::placeholder {
+    color: vars.$neutral-dark-80;
+  }
+}

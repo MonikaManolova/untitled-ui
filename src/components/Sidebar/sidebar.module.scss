@@ -1,0 +1,81 @@
+@use "../../styles/variables.scss" as vars;
+
+.wrapper {
+  height: 100vh;
+  width: 290px;
+  border-right: 1px solid vars.$neutral-light-15;
+  padding: 32px 0;
+}
+.logoWrapper {
+  padding: 0 24px;
+  padding-bottom: 24px;
+}
+
+.navContainer {
+  height: 100%;
+  height: calc(100% - 60px);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navigation {
+  margin: 0 16px;
+}
+
+.navItem {
+  padding: 10px 12px;
+  margin-bottom: 4px;
+  color: vars.$neutral-dark-100;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  @include vars.text-md(500);
+  position: relative;
+  .name {
+    padding-left: 12px;
+  }
+  .number {
+    @include vars.text-sm(500);
+    padding: 2px 8px;
+    background: vars.$neutral-light-10;
+    border-radius: 20px;
+    position: absolute;
+    right: 12px;
+  }
+  &:hover,
+  &[aria-current] {
+    background: vars.$light-blue;
+    color: vars.$accent-blue;
+    cursor: pointer;
+    path {
+      stroke: vars.$accent-blue;
+    }
+    .number {
+      background: vars.$light-blue;
+    }
+  }
+}
+
+.account {
+  border: 1px solid vars.$neutral-light-15;
+  border-radius: 14px;
+  padding: 20px 14px;
+  margin-top: 24px;
+}
+
+.avatar {
+  justify-content: space-between;
+  img {
+    width: 40px;
+    border-radius: 40px;
+    margin-right: 12px;
+  }
+  .name {
+    @include vars.text-sm(600);
+    color: vars.$neutral-dark-100;
+  }
+  .label {
+    @include vars.text-sm(400);
+    color: vars.$neutral-dark-80;
+  }
+}

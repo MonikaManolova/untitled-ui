@@ -1,0 +1,12 @@
+@use "../../styles/variables.scss" as vars;
+
+.item {
+  padding: 10px 14px;
+  color: vars.$neutral-dark-100;
+  @include vars.text-sm(500);
+  &:hover,
+  &.active {
+    background: vars.$neutral-light-05;
+    cursor: pointer;
+  }
+}

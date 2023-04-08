@@ -1,0 +1,108 @@
+@use "../../styles/variables.scss" as vars;
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid vars.$neutral-light-15;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1);
+}
+
+.table {
+  width: 100%;
+  min-width: 1010px;
+}
+
+.row {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    minmax(210px, 220px) 110px minmax(260px, 1.5fr) minmax(148px, 200px)
+    1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid vars.$neutral-light-15;
+  background: vars.$neutral-light-05;
+
+  &.dataRow {
+    height: 72px;
+    background: vars.$neutral-white;
+  }
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  height: 44px;
+  input {
+    margin-right: 12px;
+  }
+}
+
+.headerCol {
+  @include vars.text-xs(500);
+  color: vars.$neutral-dark-80;
+  svg {
+    margin-left: 4px;
+  }
+  &:nth-child(4) {
+    span {
+      min-width: 114px;
+    }
+  }
+  &:nth-child(5) {
+    span {
+      min-width: 128px;
+    }
+  }
+  &:nth-child(6) {
+    span {
+      display: block;
+      min-width: 132px;
+    }
+  }
+}
+
+.name {
+  color: vars.$neutral-dark-100;
+  @include vars.text-sm(500);
+}
+
+.secondaryText {
+  color: vars.$neutral-dark-80;
+  @include vars.text-sm(400);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+.label {
+  border-radius: 16px;
+  padding: 2px 8px;
+  background: #ecfdf3;
+  color: #027a48;
+  @include vars.text-xs(500);
+  &.churned {
+    background: vars.$neutral-light-10;
+    color: vars.$neutral-dark-90;
+  }
+}
+
+.actionsWrapper {
+  margin-left: auto;
+  padding-right: 24px;
+  gap: 4px;
+  div {
+    padding: 10px;
+    display: grid;
+    border-radius: 8px;
+    &:hover {
+      background: vars.$neutral-light-05;
+      cursor: pointer;
+      path {
+        transition: all 0.2s ease-in;
+        stroke: vars.$accent-blue;
+      }
+    }
+  }
+}

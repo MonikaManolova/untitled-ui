@@ -1,0 +1,13 @@
+@use "../../styles/variables.scss" as vars;
+
+.wrapper {
+  min-width: 128px;
+  height: 8px;
+  border-radius: 10px;
+  background: vars.$light-blue;
+}
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  background: vars.$accent-blue;
+}

@@ -1,0 +1,48 @@
+// COLORS
+$neutral-white: #ffffff;
+$neutral-light-05: #f9fafb;
+$neutral-light-10: #f2f4f7;
+$neutral-light-15: #eaecf0;
+$neutral-light-30: #d0d5dd;
+$neutral-dark-80: #667085;
+$neutral-dark-90: #344054;
+$neutral-dark-100: #101828;
+$accent-blue: #434ce6;
+$accent-blue-shade: #242ecf;
+$light-blue: #ecf3fe;
+
+// TYPOGRAPHY
+@mixin display-sm($weight) {
+  font-weight: $weight;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+@mixin display-sm($weight) {
+  font-weight: $weight;
+  font-size: 30px;
+  line-height: 38px;
+}
+@mixin text-xl($weight) {
+  font-weight: $weight;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin text-md($weight) {
+  font-weight: $weight;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin text-sm($weight) {
+  font-weight: $weight;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin text-xs($weight) {
+  font-weight: $weight;
+  font-size: 12px;
+  line-height: 18px;
+}

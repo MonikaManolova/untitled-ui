@@ -1,0 +1,12 @@
+@use "../../styles/variables.scss" as vars;
+
+.badge {
+  border-radius: 16px;
+  padding: 2px 8px 2px 10px;
+  background: #ecfdf3;
+  span {
+    color: #027a48;
+    @include vars.text-sm(500);
+    padding-left: 4px;
+  }
+}
